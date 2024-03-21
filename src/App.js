@@ -1,7 +1,9 @@
+import PagesRoute from "./routes/PagesRoute";
+
 const App = () => {
   return (
     <>
-      <h1>I Am React App</h1>
+      <PagesRoute />
     </>
   );
 }
