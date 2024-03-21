@@ -2,7 +2,7 @@ import React from 'react'
 import { Route, Routes } from 'react-router-dom';
 import Dashboard from '../pages/Dashboard';
 
-const PagesRoute = () => {
+const PagesRoutes = () => {
     return (
         <>
             <Routes>
@@ -12,4 +12,4 @@ const PagesRoute = () => {
     )
 };
 
-export default PagesRoute;
+export default PagesRoutes;

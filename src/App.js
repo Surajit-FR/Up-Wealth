@@ -1,9 +1,9 @@
-import PagesRoute from "./routes/PagesRoute";
+import PagesRoutes from "./routes/Page.routes";
 
 const App = () => {
   return (
     <>
-      <PagesRoute />
+      <PagesRoutes />
     </>
   );
 }
