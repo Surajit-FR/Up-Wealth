@@ -1,9 +1,12 @@
 import React from 'react'
+import Home from '../components/core/Home';
 
 const Dashboard = () => {
-  return (
-    <div>Dashboard</div>
-  )
+    return (
+        <div style={{ flex: 1 }}>
+            <Home />
+        </div>
+    )
 };
 
 export default Dashboard;

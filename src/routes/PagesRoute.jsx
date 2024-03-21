@@ -1,8 +1,14 @@
 import React from 'react'
+import { Route, Routes } from 'react-router-dom';
+import Dashboard from '../pages/Dashboard';
 
 const PagesRoute = () => {
     return (
-        <div>PagesRoute</div>
+        <>
+            <Routes>
+                <Route path='/dashboard' element={<Dashboard />} />
+            </Routes>
+        </>
     )
 };
 
