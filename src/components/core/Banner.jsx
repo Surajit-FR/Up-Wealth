@@ -47,27 +47,27 @@ const Banner = () => {
                 modifier: 0.5,
                 slideShadows: true,
             },
-            // autoplay: {
-            //     delay: 3000,
-            //     disableOnInteraction: false,
-            //     reverseDirection: true,
-            // },
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+                reverseDirection: true,
+            },
             loop: true,
             initialSlide: 1,
-            breakpoints: {
-                640: {
-                    slidesPerView: 2
-                },
-                768: {
-                    slidesPerView: 1
-                },
-                1024: {
-                    slidesPerView: 3
-                },
-                1600: {
-                    slidesPerView: 5
-                }
-            }
+            // breakpoints: {
+            //     640: {
+            //         slidesPerView: 2
+            //     },
+            //     768: {
+            //         slidesPerView: 1
+            //     },
+            //     1024: {
+            //         slidesPerView: 3
+            //     },
+            //     1600: {
+            //         slidesPerView: 5
+            //     }
+            // }
         });
 
         return () => {
