@@ -41,7 +41,7 @@ const Banner = () => {
             coverflowEffect: {
                 rotate: 0,
                 stretch: 0,
-                depth: 1000,
+                depth: 800,
                 modifier: 0.5,
                 slideShadows: true,
             },
@@ -52,6 +52,20 @@ const Banner = () => {
             },
             loop: true,
             initialSlide: 1,
+            // breakpoints: {
+            //     640: {
+            //         slidesPerView: 2
+            //     },
+            //     768: {
+            //         slidesPerView: 1
+            //     },
+            //     1024: {
+            //         slidesPerView: 3
+            //     },
+            //     1595: {
+            //         slidesPerView: 2
+            //     }
+            // }
         });
 
         return () => {
