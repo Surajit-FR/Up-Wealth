@@ -1,13 +1,12 @@
 import React from 'react';
-import Home from '../../components/core/Home';
 import Contact from '../../components/core/Contact';
+import AboutUs from '../../components/core/AboutUs';
 
 const LandingPage = () => {
     return (
         <>
-            {/* Home Comp. */}
-            <Home />
-
+            {/* AboutUs */}
+            <AboutUs />
             {/* Contact Comp. */}
             <Contact />
         </>
