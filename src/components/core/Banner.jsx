@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link'; // Import HashLink instead of Link
 import Swiper from 'swiper/bundle';
+// import 'swiper/css/bundle';
+
 
 const Banner = () => {
 
@@ -45,27 +47,27 @@ const Banner = () => {
                 modifier: 0.5,
                 slideShadows: true,
             },
-            autoplay: {
-                delay: 3000,
-                disableOnInteraction: false,
-                reverseDirection: true,
-            },
+            // autoplay: {
+            //     delay: 3000,
+            //     disableOnInteraction: false,
+            //     reverseDirection: true,
+            // },
             loop: true,
             initialSlide: 1,
-            // breakpoints: {
-            //     640: {
-            //         slidesPerView: 2
-            //     },
-            //     768: {
-            //         slidesPerView: 1
-            //     },
-            //     1024: {
-            //         slidesPerView: 3
-            //     },
-            //     1595: {
-            //         slidesPerView: 2
-            //     }
-            // }
+            breakpoints: {
+                640: {
+                    slidesPerView: 2
+                },
+                768: {
+                    slidesPerView: 1
+                },
+                1024: {
+                    slidesPerView: 3
+                },
+                1600: {
+                    slidesPerView: 5
+                }
+            }
         });
 
         return () => {
@@ -100,7 +102,7 @@ const Banner = () => {
                                 {
                                     slides?.map((item, index) => {
                                         return (
-                                            <div key={index} className={`swiper-slide swiper-slide--${item?.slideClass} bet_bg`} style={{ backgroundImage: `url(${item?.imgUrl})` }}>
+                                            <div key={index} className={`swiper-slide swiper-slide--${item?.slideClass} bet_bg`} style={{ backgroundImage: `url(${item?.imgUrl})`, width: "400px" }}>
                                                 <div>
 
                                                 </div>
