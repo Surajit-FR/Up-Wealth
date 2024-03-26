@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { HashLink } from 'react-router-hash-link'; // Import HashLink instead of Link
+import { HashLink } from 'react-router-hash-link';
 import Swiper from 'swiper/bundle';
-// import 'swiper/css/bundle';
+import 'swiper/css/bundle';
 
 
 const Banner = () => {
@@ -43,9 +43,9 @@ const Banner = () => {
             coverflowEffect: {
                 rotate: 0,
                 stretch: 0,
-                depth: 800,
-                modifier: 0.5,
-                slideShadows: true,
+                depth: 500,
+                modifier: 0.8,
+                slideShadows: false,
             },
             autoplay: {
                 delay: 3000,
@@ -102,10 +102,8 @@ const Banner = () => {
                                 {
                                     slides?.map((item, index) => {
                                         return (
-                                            <div key={index} className={`swiper-slide swiper-slide--${item?.slideClass} bet_bg`} style={{ backgroundImage: `url(${item?.imgUrl})`, width: "400px" }}>
-                                                <div>
-
-                                                </div>
+                                            <div key={index} className={`swiper-slide swiper-slide--${item?.slideClass} bet_bg`} style={{ backgroundImage: `url(${item?.imgUrl})`, width: "400px", height: "800px" }}>
+                                                <div></div>
                                             </div>
                                         )
                                     })
