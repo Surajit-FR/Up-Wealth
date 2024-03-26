@@ -1,0 +1,33 @@
+const image = {
+  "1": "..\\assets\\img\\1.png",
+  "2": "..\\assets\\img\\2.png",
+  "3": "..\\assets\\img\\3.png",
+  "4": "..\\assets\\img\\4.png",
+  "5": "..\\assets\\img\\5.png",
+  "about-bg": "..\\assets\\img\\about-bg.png",
+  "abouts1": "..\\assets\\img\\abouts1.png",
+  "abouts2": "..\\assets\\img\\abouts2.png",
+  "abouts3": "..\\assets\\img\\abouts3.png",
+  "abouts4": "..\\assets\\img\\abouts4.png",
+  "arrow1": "..\\assets\\img\\arrow1.png",
+  "arrow2": "..\\assets\\img\\arrow2.png",
+  "bg(1)": "..\\assets\\img\\bg(1).png",
+  "bg": "..\\assets\\img\\bg.png",
+  "Ellipse 12(1)": "..\\assets\\img\\Ellipse 12(1).png",
+  "Ellipse 12": "..\\assets\\img\\Ellipse 12.png",
+  "Ellipse 13(1)": "..\\assets\\img\\Ellipse 13(1).png",
+  "Ellipse 13": "..\\assets\\img\\Ellipse 13.png",
+  "Ellipse 14(1)": "..\\assets\\img\\Ellipse 14(1).png",
+  "Ellipse 14": "..\\assets\\img\\Ellipse 14.png",
+  "favicon": "..\\assets\\img\\favicon.png",
+  "logo": "..\\assets\\img\\logo.png",
+  "Property 1=Variant2(1)": "..\\assets\\img\\Property 1=Variant2(1).png",
+  "Property 1=Variant2(2)": "..\\assets\\img\\Property 1=Variant2(2).png",
+  "Property 1=Variant2(3)": "..\\assets\\img\\Property 1=Variant2(3).png",
+  "Property 1=Variant2": "..\\assets\\img\\Property 1=Variant2.png",
+  "rectangle": "..\\assets\\img\\rectangle.png",
+  "right1": "..\\assets\\img\\right1.png",
+  "up-text": "..\\assets\\img\\up-text.png"
+};
+
+module.exports = image;
