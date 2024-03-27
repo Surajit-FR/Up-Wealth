@@ -689,7 +689,7 @@ h6 {
 .box {
 	width: 5%;
 	border: 1px solid #f0f0f380;
-	transition: all 0.3s ease;
+	transition: 0.6s ease-in-out;
 	background-color: #fff;
 }
 
