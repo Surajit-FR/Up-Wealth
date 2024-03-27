@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Banner from '../core/Banner';
+import { HashLink } from 'react-router-hash-link';
 
 const Navbar = () => {
     const [activeLink, setActiveLink] = useState('Home'); // Default active link is Home
@@ -27,7 +28,7 @@ const Navbar = () => {
                                     <Link className={`nav-link ${activeLink === 'Home' ? 'active' : ''}`} aria-current="page" to="#" onClick={() => handleLinkClick('Home')}>Home</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className={`nav-link ${activeLink === 'Contact Us' ? 'active' : ''}`} to="#" onClick={() => handleLinkClick('Contact Us')}>Contact Us</Link>
+                                    <HashLink className={`nav-link ${activeLink === 'Contact Us' ? 'active' : ''}`} to="#contact-section" onClick={() => handleLinkClick('Contact Us')}>Contact Us</HashLink>
                                 </li>
                             </ul>
                             <form className="d-flex">
