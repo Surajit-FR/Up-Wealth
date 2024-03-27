@@ -44,7 +44,7 @@ const Contact = () => {
         </div>
         <div className="box-container" id="gridBox">
           {
-            Array?.from({ length: 220 }, (_, index) => (
+            Array?.from({ length: containerWidth < 1514 ? 340 : 220 }, (_, index) => (
               <div className="box" style={{ height: (containerWidth * 0.05) }} key={index}></div>
             ))
           }
