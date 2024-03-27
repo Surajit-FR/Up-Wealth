@@ -1,43 +1,53 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 const Contact = () => {
+  const [containerWidth, setContainerWidth] = useState(0);
+
+  useEffect(() => {
+    const container = document.getElementById("gridBox");
+    setContainerWidth(Number(container?.clientWidth));
+  }, []);
+
   return (
     <>
       {/* Contact form section */}
-      <div id='contact-section' className="contact_box">
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-lg-9 col-xl-9 col-md-9">
-              <form className="form_box">
-                <div className="contact_text text-center">
-                  <h2>Contact our friendly team</h2>
-                  <p>Let us know how we can help</p>
-                </div>
-                <div className="row">
-                  <div className="col-md-6 col-xl-6">
-                    <input className="input_1" type="text" name="first_name" placeholder="First Name" />
-                  </div>
-                  <div className="col-md-6 col-xl-6">
-                    <input className="input_1" type="text" name="last_name" placeholder="Last Name" />
-                  </div>
-                  <div className="col-md-6 col-xl-6">
-                    <input className="input_1" type="text" name="text" placeholder="Phone number" />
-                  </div>
-                  <div className="col-md-6 col-xl-6">
-                    <input className="input_1" type="email" name="email" placeholder="Email ID" />
-                  </div>
-                  <div className="col-md-12 col-xl-12">
-                    <textarea className="input_1 textarea_1" placeholder="Message"></textarea>
-                  </div>
-                  <div className="col-md-12 col-xl-12 text-center">
-                    <button className="submit1" type="button">
-                      Submit
-                    </button>
-                  </div>
-                </div>
-              </form>
+      <div className="main-container">
+        <div className='ps_box'>
+          <form className="form_box">
+            <div className="contact_text text-center">
+              <h2>Contact our friendly team</h2>
+              <p>Let us know how we can help</p>
             </div>
-          </div>
+            <div className="row">
+              <div className="col-md-6 col-xl-6">
+                <input className="input_1" type="text" name="first_name" placeholder="First Name" />
+              </div>
+              <div className="col-md-6 col-xl-6">
+                <input className="input_1" type="text" name="last_name" placeholder="Last Name" />
+              </div>
+              <div className="col-md-6 col-xl-6">
+                <input className="input_1" type="text" name="text" placeholder="Phone number" />
+              </div>
+              <div className="col-md-6 col-xl-6">
+                <input className="input_1" type="email" name="email" placeholder="Email ID" />
+              </div>
+              <div className="col-md-12 col-xl-12">
+                <textarea className="input_1 textarea_1" placeholder="Message"></textarea>
+              </div>
+              <div className="col-md-12 col-xl-12 text-center">
+                <button className="submit1" type="button">
+                  Submit
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div className="box-container" id="gridBox">
+          {
+            Array?.from({ length: 220 }, (_, index) => (
+              <div className="box" style={{ height: (containerWidth * 0.05) }} key={index}></div>
+            ))
+          }
         </div>
       </div>
 
