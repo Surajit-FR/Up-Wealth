@@ -3,7 +3,111 @@ import React from 'react'
 const Contact = () => {
   return (
     <>
-      <h4>Contact -- Content Will Be Here</h4>
+      {/* Contact form section */}
+      <div id='contact-section' className="contact_box">
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-lg-9 col-xl-9 col-md-9">
+              <form className="form_box">
+                <div className="contact_text text-center">
+                  <h2>Contact our friendly team</h2>
+                  <p>Let us know how we can help</p>
+                </div>
+                <div className="row">
+                  <div className="col-md-6 col-xl-6">
+                    <input className="input_1" type="text" name="first_name" placeholder="First Name" />
+                  </div>
+                  <div className="col-md-6 col-xl-6">
+                    <input className="input_1" type="text" name="last_name" placeholder="Last Name" />
+                  </div>
+                  <div className="col-md-6 col-xl-6">
+                    <input className="input_1" type="text" name="text" placeholder="Phone number" />
+                  </div>
+                  <div className="col-md-6 col-xl-6">
+                    <input className="input_1" type="email" name="email" placeholder="Email ID" />
+                  </div>
+                  <div className="col-md-12 col-xl-12">
+                    <textarea className="input_1 textarea_1" placeholder="Message"></textarea>
+                  </div>
+                  <div className="col-md-12 col-xl-12 text-center">
+                    <button className="submit1" type="button">
+                      Submit
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Get in touch section */}
+      <div className="get_box">
+        <div className="container">
+          <div className="row">
+            <div className="col-xl-4 col-md-4">
+              <div className="get_text">
+                <h3>Get in touch with Upwealth magazine</h3>
+                <p>If you have any questions regarding subscriptions, or how to feature or advertise in our magazine, don't
+                  hesitate to get in touch</p>
+              </div>
+            </div>
+            <div className="col-xl-8 col-md-8">
+              <div className="row">
+                <div className="col-md-4">
+                  <div className="call_box">
+                    <div className="text-center mx-auto w-100">
+                      <div className="font_box">
+                        <img className="font_img_1" src="/assets/img/c1.png" alt='' />
+                        <img className="font_img_2" src="/assets/img/c2.png" alt='' />
+                      </div>
+                      <div className="chat_text">
+                        <h5 className="ch1">Chat with us</h5>
+                        <h5 className="call_1 ch1">
+                          <a href="tel:+1(931)-266-6101">+1(931)-266-6101</a>
+                        </h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-md-4">
+                  <div className="call_box">
+                    <div className="text-center mx-auto w-100">
+                      <div className="font_box">
+                        <img className="font_img_1" src="/assets/img/p1.png" alt='' />
+                        <img className="font_img_2" src="/assets/img/p2.png" alt='' />
+                      </div>
+                      <div className="chat_text">
+                        <h5 className="ch1">Call us</h5>
+                        <h5 className="call_1 ch1">
+                          <a href="tel:+1(931)-266-6424">+1(931)-266-6424</a>
+                        </h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-md-4">
+                  <div className="call_box">
+                    <div className="text-center mx-auto w-100">
+                      <div className="font_box">
+                        <img className="font_img_1" src="/assets/img/m1.png" alt='' />
+                        <img className="font_img_2" src="/assets/img/m2.png" alt='' />
+                      </div>
+                      <div className="chat_text">
+                        <h5 className="ch1">Send an email</h5>
+                        <h5 className="call_1 ch1 font1">
+                          <a href="mailto:info@upwealthmagazine.com">info@upwealthmagazine.com</a>
+                        </h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   )
 };

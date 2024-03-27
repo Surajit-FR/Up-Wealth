@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 
 const AboutUs = () => {
 
@@ -46,10 +46,10 @@ const AboutUs = () => {
                                         large business owners who have mastered the art of creating and maintaining business systems, sticking
                                         to their visions and persisting in their missions!The power of leveraging other businesses is unmatched.
                                     </p>
-                                    <Link className="dwonarrow left_margan" to="#">
+                                    <HashLink className="dwonarrow left_margan" to="#contact-section">
                                         <img className="arrow1" src="/assets/img/arrow1.png" alt='' />
                                         <img className="arrow2" src="/assets/img/arrow2.png" alt='' />
-                                    </Link>
+                                    </HashLink>
                                 </div>
                             </div>
 

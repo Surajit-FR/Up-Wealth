@@ -11,15 +11,19 @@ const Banner = () => {
         { imgUrl: '/assets/img/3.png', slideClass: 'three', },
         { imgUrl: '/assets/img/4.png', slideClass: 'four', },
         { imgUrl: '/assets/img/5.png', slideClass: 'five', }
-    ]
-    const initialSlideIndex = Math.floor(slides.length / 2);
+    ];
+
+    const initialSlideIndex = Math?.floor(slides?.length / 2);
     const swiperRef = useRef(null);
+
     // useEffect to control the slides   
     useEffect(() => {
         if (swiperRef.current) {
             const swiper = new Swiper(swiperRef.current, {
                 effect: 'coverflow',
-                transition: { duration: 500, },
+                transition: {
+                    duration: 500,
+                },
                 grabCursor: true,
                 centeredSlides: true, // Center the active slide 
                 slidesPerView: 'auto', // Number of slides per view                
@@ -38,7 +42,9 @@ const Banner = () => {
                 loop: true,
                 initialSlide: initialSlideIndex,
             });
-            return () => { swiper.destroy(); };
+            return () => {
+                swiper.destroy();
+            };
         }
     }, [initialSlideIndex]);
 
@@ -65,7 +71,12 @@ const Banner = () => {
                             </div>
                         </div>
                         <div className="col-md-12 col-lg-7">
-                            <div className="swiper-container" style={{ width: 'auto', overflow: 'hidden', }} ref={swiperRef}>
+                            <div className="swiper"
+                                style={{
+                                    width: 'auto',
+                                    overflow: 'hidden',
+                                }}
+                                ref={swiperRef}>
                                 <div className="swiper-wrapper">
                                     {
                                         slides?.map((item, index) => {
