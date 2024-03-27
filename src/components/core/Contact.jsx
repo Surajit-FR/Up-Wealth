@@ -11,7 +11,7 @@ const Contact = () => {
   return (
     <>
       {/* Contact form section */}
-      <div className="main-container">
+      <div className="main-container" id='contact-section'>
         <div className='ps_box'>
           <form className="form_box">
             <div className="contact_text text-center">
