@@ -1,7 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { HashLink } from 'react-router-hash-link';
 
 const AboutUs = () => {
+    const [clickedImages, setClickedImages] = useState([]);
+
+    const handleClick = (index) => {
+        const newClickedImages = [...clickedImages];
+        newClickedImages[index] = !newClickedImages[index];
+        setClickedImages(newClickedImages);
+    };
+
+    const handleMouseLeave = (index) => {
+        if (clickedImages[index]) {
+            const newClickedImages = [...clickedImages];
+            newClickedImages[index] = !newClickedImages[index];
+            setClickedImages(newClickedImages);
+        }
+    };
 
     return (
         <>
@@ -9,26 +24,44 @@ const AboutUs = () => {
                 <div className="container">
                     <div className="bg_box">
                         <img className="bg_img" src="/assets/img/about-bg.png" alt='' />
+
                         <div className="text-cnter up_img">
                             <img src="/assets/img/up-text.png" alt='' />
                         </div>
-                        <div className="f_bottom1">
-                            <img src="/assets/img/abouts1.png" alt='' />
+
+                        <div
+                            className={`f_bottom1 ${clickedImages[0] ? 'active' : ''}`}
+                            onClick={() => handleClick(0)}
+                            onMouseLeave={() => handleMouseLeave(0)}
+                        >
+                            <img src={`/assets/img/abouts1${clickedImages[0] ? '_other' : ''}.png`} alt='' />
                         </div>
-                        <div className="f_bottom1 f_bottom2">
-                            <img src="/assets/img/abouts2.png" alt='' />
+                        <div
+                            className={`f_bottom2 ${clickedImages[1] ? 'active' : ''}`}
+                            onClick={() => handleClick(1)}
+                            onMouseLeave={() => handleMouseLeave(1)}
+                        >
+                            <img src={`/assets/img/abouts2${clickedImages[1] ? '_other' : ''}.png`} alt='' />
                         </div>
-                        <div className="f_bottom1 f_bottom3">
-                            <img src="/assets/img/abouts3.png" alt='' />
+                        <div
+                            className={`f_bottom3 ${clickedImages[2] ? 'active' : ''}`}
+                            onClick={() => handleClick(2)}
+                            onMouseLeave={() => handleMouseLeave(2)}
+                        >
+                            <img src={`/assets/img/abouts3${clickedImages[2] ? '_other' : ''}.png`} alt='' />
                         </div>
-                        <div className="f_bottom1 f_bottom4">
-                            <img src="/assets/img/abouts4.png" alt='' />
+                        <div
+                            className={`f_bottom4 ${clickedImages[3] ? 'active' : ''}`}
+                            onClick={() => handleClick(3)}
+                            onMouseLeave={() => handleMouseLeave(3)}
+                        >
+                            <img src={`/assets/img/abouts4${clickedImages[3] ? '_other' : ''}.png`} alt='' />
                         </div>
-                        <div className="center_top">
+
+                        <div className="center_top ">
                             <img src="/assets/img/rectangle.png" alt='' />
                         </div>
                     </div>
-
 
                     <div className="ab_bg">
                         <div className="row">
@@ -52,7 +85,6 @@ const AboutUs = () => {
                                     </HashLink>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
