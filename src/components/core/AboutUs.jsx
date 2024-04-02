@@ -1,22 +1,49 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { HashLink } from 'react-router-hash-link';
 
 const AboutUs = () => {
-    const [clickedImages, setClickedImages] = useState([]);
+    // const [clickedImages, setClickedImages] = useState([]);
 
-    const handleClick = (index) => {
-        const newClickedImages = [...clickedImages];
-        newClickedImages[index] = !newClickedImages[index];
-        setClickedImages(newClickedImages);
-    };
+    // const handleClick = (index) => {
+    //     const newClickedImages = [...clickedImages];
+    //     newClickedImages[index] = !newClickedImages[index];
+    //     setClickedImages(newClickedImages);
+    // };
 
-    const handleMouseLeave = (index) => {
-        if (clickedImages[index]) {
-            const newClickedImages = [...clickedImages];
-            newClickedImages[index] = !newClickedImages[index];
-            setClickedImages(newClickedImages);
-        }
-    };
+    // const handleMouseLeave = (index) => {
+    //     if (clickedImages[index]) {
+    //         const newClickedImages = [...clickedImages];
+    //         newClickedImages[index] = !newClickedImages[index];
+    //         setClickedImages(newClickedImages);
+    //     }
+    // };
+
+    const imageArray = [
+        {
+            className: "f_bottom1",
+            url: "/assets/img/abouts1.png",
+            hover_url: "/assets/img/abouts1_other.png",
+            alt: ""
+        },
+        {
+            className: "f_bottom2",
+            url: "/assets/img/abouts2.png",
+            hover_url: "/assets/img/abouts2_other.png",
+            alt: ""
+        },
+        {
+            className: "f_bottom3",
+            url: "/assets/img/abouts3.png",
+            hover_url: "/assets/img/abouts3_other.png",
+            alt: ""
+        },
+        {
+            className: "f_bottom4",
+            url: "/assets/img/abouts4.png",
+            hover_url: "/assets/img/abouts4_other.png",
+            alt: ""
+        },
+    ];
 
     return (
         <>
@@ -29,7 +56,24 @@ const AboutUs = () => {
                             <img src="/assets/img/up-text.png" alt='' />
                         </div>
 
-                        <div
+                        {
+                            imageArray?.map((item, index) => {
+                                return (
+                                    <div className={`${item?.className} flip-card`} key={index}>
+                                        <div className="flip-card-inner">
+                                            <div className="flip-card-front">
+                                                <img src={item?.url} alt={item?.alt} />
+                                            </div>
+                                            <div className="flip-card-back">
+                                                <img src={item?.hover_url} alt={item?.alt} />
+                                            </div>
+                                        </div>
+                                    </div>
+                                )
+                            })
+                        }
+
+                        {/* <div
                             className={`f_bottom1 ${clickedImages[0] ? 'active' : ''}`}
                             onClick={() => handleClick(0)}
                             onMouseLeave={() => handleMouseLeave(0)}
@@ -56,7 +100,7 @@ const AboutUs = () => {
                             onMouseLeave={() => handleMouseLeave(3)}
                         >
                             <img src={`/assets/img/abouts4${clickedImages[3] ? '_other' : ''}.png`} alt='' />
-                        </div>
+                        </div> */}
 
                         <div className="center_top ">
                             <img src="/assets/img/rectangle.png" alt='' />
