@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
+    const [isLink2_Hovered, setIsLink2_Hovered] = useState(false);
+    const [isLink3_Hovered, setIsLink3_Hovered] = useState(false);
+
     return (
         <>
             <footer className="footer_bg">
@@ -18,11 +21,17 @@ const Footer = () => {
                                     <li>
                                         <Link to="#">Home</Link>
                                     </li>
-                                    <li>
-                                        <Link to="#">Kaltech <span>Consultancy</span></Link>
+                                    <li
+                                        onMouseEnter={() => setIsLink2_Hovered(true)}
+                                        onMouseLeave={() => setIsLink2_Hovered(false)}
+                                    >
+                                        <Link to="#">Kaltech <span className={isLink2_Hovered ? 'active' : ''}>Consultancy</span></Link>
                                     </li>
-                                    <li>
-                                        <Link to="#">Insurance Life <span>Mafazine</span></Link>
+                                    <li
+                                        onMouseEnter={() => setIsLink3_Hovered(true)}
+                                        onMouseLeave={() => setIsLink3_Hovered(false)}
+                                    >
+                                        <Link to="#">Insurance Life <span className={isLink3_Hovered ? 'active' : ''}>Mafazine</span></Link>
                                     </li>
                                 </ul>
                             </div>
